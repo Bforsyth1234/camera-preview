@@ -101,10 +101,10 @@ public class CameraPreview: CAPPlugin {
                     }
                     let height = self.paddingBottom != nil ? self.height! - self.paddingBottom!: self.height!;
                     self.previewView = UIView(frame: CGRect(x: 0, y: 0, width: self.width!, height: height))
-                    self.webView.isOpaque = false
-                    self.webView.backgroundColor = UIColor.clear
-                    self.webView.scrollView.backgroundColor = UIColor.clear
-                    self.webView.superview?.addSubview(self.previewView)
+                    self.webView?.isOpaque = false
+                    self.webView!.backgroundColor = UIColor.clear
+                    self.webView?.scrollView.backgroundColor = UIColor.clear
+                    self.webView?.superview?.addSubview(self.previewView)
                     if (self.toBack!) {
                         self.webView?.superview?.bringSubviewToFront(self.webView!)
                     }
@@ -262,36 +262,5 @@ public class CameraPreview: CAPPlugin {
         }
     }
 
-        @objc func startRecordVideo(_ call: CAPPluginCall) {
-            DispatchQueue.main.async {
-
-            let quality: Int? = call.getInt("quality", 85)
-            
-            self.cameraController.captureVideo { (image, error) in
-
-                guard let image = image else {
-                    print(error ?? "Image capture error")
-                    guard let error = error else {
-                        call.reject("Image capture error")
-                        return
-                    }
-                    call.reject(error.localizedDescription)
-                    return
-                }
-
-                    self.videoUrl = image
-
-                    call.resolve(["value":image.absoluteString])
-                }
-            }
-        }
-
-
-        @objc func stopRecordVideo(_ call: CAPPluginCall) {
-
-            self.cameraController.stopRecording { (error) in
-
-            }
-        }
     
 }
