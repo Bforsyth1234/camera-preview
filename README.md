@@ -1,5 +1,7 @@
 # Capacitor Camera Preview
 
+This is a fork from https://github.com/capacitor-community/camera-preview
+
 Capacitor plugin that allows camera interaction from Javascript and HTML (based on cordova-plugin-camera-preview)
 
 **Releases are being kept up to date when appropriate. However, this plugin is under constant development. As such it is recommended to use master to always have the latest fixes & features.**

@@ -1,7 +1,7 @@
 {
-  "name": "@capacitor-community/camera-preview",
-  "version": "1.2.1",
-  "description": "Camera preview",
+  "name": "camera-preview",
+  "version": "0.0.1",
+  "description": "Camera preview for capacitor 3",
   "main": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
   "scripts": {
@@ -11,7 +11,7 @@
     "prepublishOnly": "npm run build",
     "prepare": "npm run build"
   },
-  "author": "Ariel Hernandez Musa",
+  "author": "Brooks Forsyth",
   "license": "MIT",
   "dependencies": {
     "@capacitor/core": "latest"
@@ -43,9 +43,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/capacitor-community/camera-preview.git"
+    "url": "https://github.com/Bforsyth1234/camera-preview"
   },
   "bugs": {
-    "url": "https://github.com/capacitor-community/camera-preview/issues"
+    "url": "https://github.com/Bforsyth1234/camera-preview/issues"
   }
 }
