@@ -1,3 +1,5 @@
+# Beta version with initial support for capacitor 3
+
 # Capacitor Camera Preview
 
 This is a fork from https://github.com/capacitor-community/camera-preview
